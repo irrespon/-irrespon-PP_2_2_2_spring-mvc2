@@ -13,8 +13,8 @@ import java.util.List;
 public class CarsController {
 
     @GetMapping("/cars")
-    public String welcome (@RequestParam(value = "quantityCar", defaultValue = "5") int quantityCar, Model model) {
-        List<Car> quantityCars = CarService.getNumberCars(CarService.getCarList(),quantityCar);
+    public String welcome (@RequestParam(value = "count", defaultValue = "5") int count, Model model) {
+        List<Car> quantityCars = CarService.getNumberCars(CarService.getCarList(), count);
         model.addAttribute("cars", quantityCars);
         return "cars";
     }

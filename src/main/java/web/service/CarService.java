@@ -8,11 +8,11 @@ import java.util.List;
 public class CarService {
 
     private static List<Car> carList = new ArrayList<>();
-    public static List<Car> getNumberCars(List<Car> carList, int quantityCar) {
-        if (quantityCar > 5) {
-            quantityCar = 5;
+    public static List<Car> getNumberCars(List<Car> carList, int count) {
+        if (count > 5) {
+            count = 5;
         }
-        return carList.stream().limit(quantityCar).toList();
+        return carList.stream().limit(count).toList();
     }
 
     public static List<Car> getCarList() {
